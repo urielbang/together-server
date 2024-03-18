@@ -10,6 +10,7 @@ bin-release/
 
 # Executables
 *.swf
+*.env
 node_modules
 *.air
 *.ipa
