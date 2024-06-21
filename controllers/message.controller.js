@@ -15,10 +15,10 @@ const addMessage = async (req, res) => {
 
 const getMessges = async (req, res) => {
   try {
-    const messages = await Message.find({});
+    const messages = await Message.find({}).populate("user");
     return res.send(messages);
   } catch (error) {
-    console.log(errors);
+    console.log(error);
     res.send("something wrong");
   }
 };
