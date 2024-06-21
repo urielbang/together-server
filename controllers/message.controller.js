@@ -15,9 +15,7 @@ const addMessage = async (req, res) => {
 
 const getMessges = async (req, res) => {
   try {
-    const messages = await Message.find({})
-      .populate("sender")
-      .populate("receiver");
+    const messages = await Message.find(...req.query);
     return res.send(messages);
   } catch (error) {
     console.log(error);
