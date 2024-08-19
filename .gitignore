@@ -4,6 +4,9 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+yarn.lock
+.gitignore
+
 
 # Other files and folders
 .settings/
