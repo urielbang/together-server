@@ -63,10 +63,10 @@ const deleteLike = async (req, res) => {
       $pull: { likes: likeRemoved._id },
     });
 
-    res.send(likeRemoved);
+    return res.send(likeRemoved);
   } catch (error) {
     console.log(error);
-    res.status(500).send("Something went wrong");
+    return res.status(500).send("Something went wrong");
   }
 };
 
